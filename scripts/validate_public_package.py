@@ -821,6 +821,14 @@ def check_secret_and_restricted_scan() -> None:
         rel = path.relative_to(ROOT).as_posix()
         rel_lower = rel.lower()
 
+        # Repository metadata and bytecode caches are not published content, and
+        # must not be scanned. `.git/logs/...` in particular collides with the
+        # "logs" exclusion, which made the validator fail only after the first
+        # commit created a reflog.
+        parts = set(path.relative_to(ROOT).parts)
+        if ".git" in parts or "__pycache__" in parts:
+            continue
+
         if any(part in rel_lower for part in RESTRICTED_DIR_PARTS) and not rel_lower.endswith(".gitignore"):
             findings.append(f"path under an excluded directory: {rel}")
 

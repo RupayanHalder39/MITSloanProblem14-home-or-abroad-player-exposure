@@ -192,6 +192,28 @@ python scripts/validate_public_package.py
 ```
 
 Passing exit code 0 with no `BLOCKED` or `FAIL` lines is the current, intended
-state: the package is internally consistent and complete except for the
-authorship caveat, which is a human decision and not a defect. A non-zero exit
-means something drifted and must be investigated before any publication step.
+state: the package is internally consistent and complete. A non-zero exit means
+something drifted and must be investigated before any publication step.
+
+## Release record
+
+| Item | Value |
+|---|---|
+| Repository | `https://github.com/RupayanHalder39/MITSloanProblem14-home-or-abroad-player-exposure` |
+| Branch | `main` |
+| Release commit | `9e8f06340907a2eb8b7bb4b0256febb1b26e520a` |
+| Commit message | `Prepare MIT Sloan Problem 14 public research release` |
+| Published | `main` pushed to `origin` and verified against the remote |
+| Validator at release | 182 checks, 0 failures, 0 blockers |
+| Tamper battery at release | 30 deliberate mutations, all 30 caught; 4 controls clean |
+| Files published | 46 |
+
+`origin/main` was confirmed to resolve to the commit above by `git ls-remote`
+against GitHub, independently of the local remote-tracking ref, and the branch is
+0 ahead / 0 behind. The release was pushed with a normal fast-forward push; no
+force, no tags, and no other branch were touched.
+
+The commit that carries this record is a follow-up to the release commit, made
+only so that this file can state a hash that did not exist when the release
+commit was written. It changes documentation alone: no source file, result table,
+figure, asset or validator check differs between the two commits.
