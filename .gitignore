@@ -1,0 +1,90 @@
+# Operating system
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Environment and secrets
+.env
+.env.*
+*.env
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+credentials.json
+secrets.yml
+secrets.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Editors and IDE state
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs and scratch
+logs/
+tmp/
+temp/
+scratch/
+*.log
+
+# Data and databases
+*.sql
+*.db
+*.sqlite
+*.sqlite3
+*.duckdb
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.dbf
+*.accdb
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.gz
+*.csv.gz
+
+# Raw and processed football data are never published.
+# An authorised local working copy belongs under src/dataset/ so that the
+# code's own relative path resolution finds it; see data/README.md.
+data/raw/
+data/processed/
+data/interim/
+src/dataset/
+src/records/
+src/eda_outputs/
+
+# Local model or analysis output
+outputs/
+out/
+figures_local/
+
+# Notebooks with embedded large outputs
+*.ipynb_checkpoints

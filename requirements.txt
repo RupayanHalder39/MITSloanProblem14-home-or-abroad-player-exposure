@@ -1,0 +1,13 @@
+# Python 3.12
+#
+# These are the packages the project-controlled analytical code imports.
+# Versions are pinned to the ones under which the frozen results were produced
+# and re-checked. A full re-run additionally requires a lawful local copy of
+# the source football data, which is NOT redistributable; see data/README.md.
+
+numpy==2.5.3
+pandas==3.0.5
+matplotlib==3.10.5
+requests==2.32.4
+
+# The validation script in scripts/ uses only the Python standard library.

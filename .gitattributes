@@ -1,0 +1,18 @@
+# Line endings are pinned so the published code stays byte-faithful to the
+# research workspace regardless of each contributor's core.autocrlf setting.
+# Files are stored with LF and checked out with LF, everywhere.
+* text=auto eol=lf
+
+*.py   text eol=lf
+*.md   text eol=lf
+*.cff  text eol=lf
+*.txt  text eol=lf
+*.csv  text eol=lf
+LICENSE text eol=lf
+
+# Binary: never touched, never line-ending converted.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.pdf  binary
